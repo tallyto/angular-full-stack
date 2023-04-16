@@ -1,0 +1,27 @@
+<div class="container">
+  <div class="alert alert-success mt-4" role="alert" [hidden]="!adicionado">
+    Funcionario adicionado {{ nome }}
+  </div>
+
+  <div class="form-group mt-4">
+    <label>Nome</label>
+    <input type="text" class="form-control" [(ngModel)]="nome" (focus)="adicionado = false" />
+  </div>
+
+  <button type="button" class="btn btn-primary mt-4" [disabled]="nome.length == 0" (click)="adicionar($event)">
+    Adicionar
+  </button>
+
+  <div class="row">
+    <div class="col-2" *ngFor="let funcionario of funcionarios">
+      <div class="card mt-4">
+        <img class="card-img-top" src="https://randomuser.me/api/portraits/men/{{funcionario.id}}.jpg">
+        <div class="card-body">
+          <h5 class="card-title">{{funcionario.nome}}</h5>
+          <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      <a href="#" class="btn btn-primary">Go somewhere</a> -->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
