@@ -1,6 +1,13 @@
 <div class="card mt-4" [ngStyle]="getEstilosCartao()">
   <img class="card-img-top" src="https://randomuser.me/api/portraits/women/{{funcionario.id}}.jpg">
   <div class="card-body">
-    <h5 class="card-title">{{funcionario.nome}}</h5>
+    <h5 class="card-title">
+      <span class="badge" [ngClass]="{
+        'bg-success': isAdmin(),
+        'bg-danger':!isAdmin()
+      }">{{funcionario.nome}}</span>
+    </h5>
   </div>
 </div>
+
+<!-- Diretivas alteram aparência e comportamento do component ex: [ngStyle], [ngClass] -->

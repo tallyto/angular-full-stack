@@ -11,9 +11,12 @@ export class FuncionarioCardComponent {
 
   getEstilosCartao() {
     return {
-      'border-width.px': this.funcionario.id,
       'background-color': this.funcionario.id % 2 == 0 ? 'lightblue' : 'lightgreen'
     }
+  }
+
+  isAdmin() {
+    return this.funcionario.nome.startsWith('T');
   }
 
 }
