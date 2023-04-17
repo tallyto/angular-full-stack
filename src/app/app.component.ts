@@ -1,8 +1,8 @@
-import { Component } from '@angular/core';
+import { Component } from '@angular/core'
 
 interface funcionario {
-  nome: string;
-  id: number;
+  nome: string
+  id: number
 }
 
 @Component({
@@ -11,17 +11,16 @@ interface funcionario {
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  nome = 'Tállyto'
+  adicionado = false
+  funcionarios: funcionario[] = []
 
-  nome = 'Tállyto';
-  adicionado = false;
-  funcionarios: funcionario[] = [];
-
-  adicionar(nomeInput: any) {
-    this.adicionado = true;
+  adicionar (): void {
+    this.adicionado = true
     this.funcionarios.push({ nome: this.nome, id: this.funcionarios.length + 1 })
   }
 
-  alterarNome($event: any) {
-    this.nome = $event.target.value;
+  alterarNome ($event: any): void {
+    this.nome = $event.target.value
   }
 }
