@@ -4,7 +4,7 @@
   </div>
   <div class="form-group mt-4">
     <label>Nome</label>
-    <input type="text" class="form-control" [(ngModel)]="nome" (focus)="adicionado = false" appCampoColorido/>
+    <input type="text" class="form-control" [(ngModel)]="nome" (focus)="adicionado = false" appCampoColorido cor="red"/>
   </div>
 
   <button type="button" class="btn btn-primary mt-4" [disabled]="nome.length === 0" (click)="adicionar()">
