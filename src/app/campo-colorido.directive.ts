@@ -12,12 +12,12 @@ export class CampoColoridoDirective {
   }
 
   @HostListener('focus')
-  onFocus() {
+  onFocus () {
     this.renderer.setStyle(this.elementRef.nativeElement, 'background-color', 'yellow')
   }
 
   @HostListener('blur')
-  onBlur() {
+  onBlur () {
     this.renderer.setStyle(this.elementRef.nativeElement, 'background-color', 'white')
   }
 }

@@ -1,12 +1,12 @@
-  <div class="alert alert-success mt-4" role="alert" *ngIf="adicionado">
-    Funcionario adicionado {{ nome }}
-  </div>
+<div class="alert alert-success mt-4" role="alert" *ngIf="adicionado">
+  Funcionario adicionado {{ nome }}
+</div>
 
-  <div class="form-group mt-4">
-    <label>Nome</label>
-    <input type="text" class="form-control" [(ngModel)]="nome" (focus)="adicionado = false" appCampoColorido />
-  </div>
+<div class="form-group mt-4">
+  <label>Nome</label>
+  <input type="text" class="form-control" [(ngModel)]="nome" (focus)="adicionado = false" appCampoColorido/>
+</div>
 
-  <button type="button" class="btn btn-primary mt-4" [disabled]="nome.length === 0" (click)="adicionar()">
-    Adicionar
-  </button>
+<button type="button" class="btn btn-primary mt-4" [disabled]="nome.length === 0" (click)="adicionar()">
+  Adicionar
+</button>

@@ -17,6 +17,9 @@ export class AppComponent {
 
   adicionar (): void {
     this.adicionado = true
-    this.funcionarios.push({ nome: this.nome, id: this.funcionarios.length + 1 })
+    this.funcionarios.push({
+      nome: this.nome,
+      id: this.funcionarios.length + 1
+    })
   }
 }

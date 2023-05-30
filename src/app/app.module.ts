@@ -5,8 +5,8 @@ import { AppRoutingModule } from './app-routing.module'
 import { AppComponent } from './app.component'
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap'
 import { FormsModule } from '@angular/forms'
-import { FuncionarioCardComponent } from './funcionario-card/funcionario-card.component';
-import { CampoColoridoDirective } from './campo-colorido.directive';
+import { FuncionarioCardComponent } from './funcionario-card/funcionario-card.component'
+import { CampoColoridoDirective } from './campo-colorido.directive'
 import { FuncionarioFormComponent } from './funcionario-form/funcionario-form.component'
 
 @NgModule({
@@ -25,4 +25,5 @@ import { FuncionarioFormComponent } from './funcionario-form/funcionario-form.co
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}
