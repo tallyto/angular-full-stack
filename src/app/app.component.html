@@ -4,12 +4,18 @@
   </div>
   <div class="form-group mt-4">
     <label>Nome</label>
-    <input type="text" class="form-control" [(ngModel)]="nome" (focus)="adicionado = false" appCampoColorido cor="red"/>
+    <input type="text" class="form-control" [(ngModel)]="nome"
+           (focus)="adicionado = false" appCampoColorido cor="red"
+           #campo="campoColorido"
+    />
   </div>
 
   <button type="button" class="btn btn-primary mt-4" [disabled]="nome.length === 0" (click)="adicionar()">
     Adicionar
   </button>
+
+  <button class="btn btn-info mt-4" (click)="campo.onFocus()">Colorir</button>
+  <button class="btn btn-info mt-4" (click)="campo.onBlur()">Descolorir</button>
 
   <div class="row">
     <div class="col-2" *ngFor="let funcionario of funcionarios">
