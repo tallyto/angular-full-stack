@@ -2,6 +2,8 @@
   <div class="alert alert-success mt-4" role="alert" *ngIf="adicionado">
     Funcionario adicionado {{ nome }}
   </div>
+
+  <app-pessoa></app-pessoa>
   <div class="form-group mt-4">
     <label>Nome</label>
     <input type="text" class="form-control" [(ngModel)]="nome"
