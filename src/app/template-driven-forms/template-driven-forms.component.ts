@@ -13,14 +13,9 @@ class Cliente {
 export class TemplateDrivenFormsComponent {
   public cliente = new Cliente();
   public profissoes: string [] = ['Programador', 'Empresario', 'Outra']
-  public profissao = 'Outra'
   salvar(form: NgForm) {
-    this.cliente.nome = form.value.nome;
-    this.cliente.email = form.value.email;
-    this.cliente.profissao = form.value.profissao;
-    console.log(form)
-
-    console.log(this.cliente)
+    form.reset()
+    this.cliente = new Cliente();
   }
 }
 
