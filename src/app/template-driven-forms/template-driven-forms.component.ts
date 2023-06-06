@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 import {NgForm} from "@angular/forms";
 
 @Component({
@@ -8,9 +8,12 @@ import {NgForm} from "@angular/forms";
 })
 export class TemplateDrivenFormsComponent {
 
+  public profissoes: string [] = ['Programador', 'Empresario', 'Outra']
+
   salvar(form: NgForm) {
     console.log(form.value.nome)
     console.log(form.value.email)
     console.log(form.value.profissao)
   }
 }
+
