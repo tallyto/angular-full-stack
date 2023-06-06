@@ -1,27 +1,68 @@
-# Projeto
+# Fullstack Angular
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.6.
+Este repositório contém um projeto Angular. O projeto é um exemplo de aplicativo que demonstra vários recursos e funcionalidades do Angular.
 
-## Development server
+## Instalação e Execução
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Siga as instruções abaixo para instalar e executar o projeto em sua máquina local:
 
-## Code scaffolding
+1. Clone este repositório em seu computador usando o comando:
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+   ```
+   git clone <URL do repositório>
+   ```
 
-## Build
+2. Certifique-se de ter o Angular CLI instalado globalmente em seu sistema. Caso não tenha, você pode instalar executando o seguinte comando:
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+   ```
+   npm install -g @angular/cli
+   ```
 
-## Running unit tests
+3. Navegue até o diretório raiz do projeto usando o terminal ou prompt de comando.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+4. Execute o comando a seguir para instalar as dependências do projeto:
 
-## Running end-to-end tests
+   ```
+   npm install
+   ```
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+5. Após a conclusão da instalação das dependências, execute o seguinte comando para iniciar o servidor de desenvolvimento:
 
-## Further help
+   ```
+   ng serve
+   ```
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+6. Aguarde até que o servidor de desenvolvimento seja iniciado. Uma vez que o servidor esteja em execução, abra seu navegador e acesse o seguinte endereço:
+
+   ```
+   http://localhost:4200
+   ```
+
+Agora você poderá ver o aplicativo em execução em seu navegador.
+
+## Recursos Demonstrados
+
+Este projeto Angular demonstra várias funcionalidades e recursos do framework, incluindo:
+
+- Adicionando validação em formulários
+- Two-Way Binding com ngModel
+- Definindo o valor padrão em campos com ngModel
+- Adicionando opções dinâmicas no campo de seleção
+- Registrando os controles do formulário
+- Criando um formulário com Template-Driven Forms
+- Passando parâmetros para Pipes
+- Conhecendo e usando Pipes
+- Exportando a API da diretiva para o template
+- Usando Property Binding em diretivas customizadas
+- Vinculando propriedades do hospedeiro com HostBinding
+- Respondendo a eventos do hospedeiro com HostListener
+- Criando diretivas customizadas
+- Utilizando classes CSS dinâmicas com ngClass
+- Aplicando estilos CSS dinâmicos com ngStyle
+- Binding de propriedades customizadas com @Input
+
+Cada recurso é demonstrado em um ou mais commits no histórico do projeto.
+
+---
+
+Aproveite o projeto e explore os diferentes recursos do Angular implementados. Se tiver alguma dúvida ou problema, sinta-se à vontade para entrar em contato com o usuário "tallyto", que é o autor deste projeto.
