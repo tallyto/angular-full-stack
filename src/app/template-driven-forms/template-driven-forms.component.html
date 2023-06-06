@@ -2,6 +2,10 @@
   {{cliente | json}}
   <br>
   <p>Valido: {{usuarioFrom.valid}}</p>
+
+  <div *ngIf="usuarioFrom.invalid" class="alert alert-danger">
+    Preencha todos os campos corretamente.
+  </div>
   <form class="mt-2" #usuarioFrom="ngForm" (ngSubmit)="salvar(usuarioFrom)">
 
     <div class="form-group">
