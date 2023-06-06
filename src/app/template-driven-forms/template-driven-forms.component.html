@@ -13,7 +13,7 @@
 
     <div class="form-group">
       <label class="form-control-label">Profissão</label>
-      <select class="form-control" ngModel name="profissao">
+      <select class="form-control" ngModel name="profissao" [ngModel]="profissao">
         <option value="" disabled>Selecione</option>
         <option *ngFor="let prosissao of profissoes" [value]="prosissao">{{prosissao}}</option>
       </select>

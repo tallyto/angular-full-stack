@@ -9,7 +9,7 @@ import {NgForm} from "@angular/forms";
 export class TemplateDrivenFormsComponent {
 
   public profissoes: string [] = ['Programador', 'Empresario', 'Outra']
-
+  public profissao = 'Outra'
   salvar(form: NgForm) {
     console.log(form.value.nome)
     console.log(form.value.email)
