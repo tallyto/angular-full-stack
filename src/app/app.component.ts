@@ -1,9 +1,5 @@
 import { Component } from '@angular/core'
 
-interface funcionario {
-  nome: string
-  id: number
-}
 
 @Component({
   selector: 'app-root',
@@ -11,15 +7,5 @@ interface funcionario {
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  nome = 'Tállyto'
-  adicionado = false
-  funcionarios: funcionario[] = []
 
-  adicionar (): void {
-    this.adicionado = true
-    this.funcionarios.push({
-      nome: this.nome,
-      id: this.funcionarios.length + 1
-    })
-  }
 }
