@@ -1,11 +1,11 @@
-<div class="card mt-4" [ngStyle]="getEstilosCartao()">
+<div [ngStyle]="getEstilosCartao()" class="card mt-4">
   <img class="card-img-top" src="https://randomuser.me/api/portraits/women/{{funcionario.id}}.jpg">
   <div class="card-body">
     <h5 class="card-title">
-      <span class="badge" [ngClass]="{
+      <span [ngClass]="{
         'bg-success': isAdmin(),
         'bg-danger': !isAdmin()
-      }">{{funcionario.nome}}</span>
+      }" class="badge">{{funcionario.nome}}</span>
     </h5>
   </div>
 </div>

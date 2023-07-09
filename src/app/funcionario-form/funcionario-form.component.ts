@@ -9,13 +9,14 @@ import {LogService} from "../log.service";
   providers: [
     FuncionarioService,
     LogService,
-    {provide: 'LogPrefixo', useValue: 'Log' }
+    {provide: 'LogPrefixo', useValue: 'Log'}
   ]
 })
-export class FuncionarioFormComponent implements OnInit{
+export class FuncionarioFormComponent implements OnInit {
   nome = 'Tállyto'
   adicionado = false
   funcionarios: Funcionario[] = [];
+
   constructor(
     private funcionarioService: FuncionarioService,
     private logService: LogService

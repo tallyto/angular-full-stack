@@ -1,4 +1,4 @@
-import { Directive, ElementRef, HostBinding, HostListener, Input, Renderer2 } from '@angular/core';
+import {Directive, ElementRef, HostBinding, HostListener, Input, Renderer2} from '@angular/core';
 
 @Directive({
   selector: '[appCampoColorido]',
@@ -22,6 +22,12 @@ export class CampoColoridoDirective {
   @HostBinding('style.backgroundColor')
   corDeFundo: string | undefined;
 
+  constructor(
+    private readonly elementRef: ElementRef,
+    private readonly renderer: Renderer2
+  ) {
+  }
+
   /**
    * Ouvinte de evento que é acionado quando o elemento recebe o foco.
    * Define a cor de fundo do elemento com base na propriedade 'cor'.
@@ -40,9 +46,4 @@ export class CampoColoridoDirective {
     this.corDeFundo = 'transparent';
     // this.renderer.setStyle(this.elementRef.nativeElement, 'background-color', 'transparent');
   }
-
-  constructor(
-    private readonly elementRef: ElementRef,
-    private readonly renderer: Renderer2
-  ) {}
 }

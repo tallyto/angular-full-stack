@@ -7,14 +7,15 @@ export class FuncionarioService {
 
   constructor(private logService: LogService) {
   }
-  public adicionar(nome: string) : void {
+
+  public adicionar(nome: string): void {
     this.logService.log(`Adicionando nome ${nome}...`)
     const funcionario: Funcionario = {id: this.funcionarios.length + 1, nome}
     this.funcionarios.push(funcionario)
     console.log(this.funcionarios)
   }
 
-  public consultar() : Funcionario[] {
+  public consultar(): Funcionario[] {
     return this.funcionarios;
   }
 }

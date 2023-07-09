@@ -1,5 +1,5 @@
-import { NgModule } from '@angular/core'
-import { RouterModule, type Routes } from '@angular/router'
+import {NgModule} from '@angular/core'
+import {RouterModule, type Routes} from '@angular/router'
 import {FuncionarioFormComponent} from "./funcionario-form/funcionario-form.component";
 import {TemplateDrivenFormsComponent} from "./template-driven-forms/template-driven-forms.component";
 import {PessoaComponent} from "./pessoa/pessoa.component";

@@ -1,25 +1,25 @@
 <div class="container">
-  <div class="alert alert-success mt-2" role="alert" *ngIf="adicionado">
+  <div *ngIf="adicionado" class="alert alert-success mt-2" role="alert">
     Funcionario adicionado {{ nome }}
   </div>
 
   <div class="form-group mt-2">
     <label>Nome</label>
-    <input type="text" class="form-control" [(ngModel)]="nome"
-           (focus)="adicionado = false" appCampoColorido cor="red"
-           #campo="campoColorido"
+    <input #campo="campoColorido" (focus)="adicionado = false" [(ngModel)]="nome"
+           appCampoColorido class="form-control" cor="red"
+           type="text"
     />
   </div>
 
-  <button type="button" class="btn btn-primary mt-2 mr-2-button" [disabled]="nome.length === 0" (click)="adicionar()">
+  <button (click)="adicionar()" [disabled]="nome.length === 0" class="btn btn-primary mt-2 mr-2-button" type="button">
     Adicionar
   </button>
 
-  <button class="btn btn-info mt-2 mr-2-button" (click)="campo.onFocus()">Colorir</button>
-  <button class="btn btn-info mt-2 mr-2-button" (click)="campo.onBlur()">Descolorir</button>
+  <button (click)="campo.onFocus()" class="btn btn-info mt-2 mr-2-button">Colorir</button>
+  <button (click)="campo.onBlur()" class="btn btn-info mt-2 mr-2-button">Descolorir</button>
 
   <div class="row">
-    <div class="col-2" *ngFor="let funcionario of funcionarios">
+    <div *ngFor="let funcionario of funcionarios" class="col-2">
       <app-funcionario-card [funcionario]="funcionario"></app-funcionario-card>
     </div>
   </div>

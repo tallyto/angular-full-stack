@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core'
+import {Component, Input} from '@angular/core'
 
 @Component({
   selector: 'app-funcionario-card',
@@ -9,13 +9,13 @@ export class FuncionarioCardComponent {
   @Input() // deixa a variável visível para o componente pai
   funcionario: any
 
-  getEstilosCartao (): any {
+  getEstilosCartao(): any {
     return {
       'background-color': this.funcionario.id % 2 === 0 ? 'lightblue' : 'lightgreen'
     }
   }
 
-  isAdmin (): boolean {
+  isAdmin(): boolean {
     return this.funcionario.nome.startsWith('T')
   }
 }
