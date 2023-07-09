@@ -1,11 +1,19 @@
 <div class="container">
-  <div *ngIf="error" class="alert alert-danger" role="alert">
-    {{error.message}}
-  </div>
-  <h2>cidade works!</h2>
+  <p *ngFor="let alert of alerts">
+    <ngb-alert [type]="alert.type" (closed)="fecharAlerta(alert)">{{ alert.message | json }}</ngb-alert>
+  </p>
+
+  <form (ngSubmit)="adicionar()" class="mt-2">
+    <input [(ngModel)]="nome" type="text" name="cidade" class="form-control" id="cidade" aria-describedby="cidadeHelp" placeholder="Nome da cidade" required>
+    <button class="btn btn-primary mt-2" type="submit">Adicionar</button>
+  </form>
+
+
+  <hr>
   <div *ngIf="cidades.length > 0">
     <p *ngFor="let cidade of cidades">
       {{cidade.nome}}
     </p>
   </div>
+
 </div>

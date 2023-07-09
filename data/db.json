@@ -1,6 +1,10 @@
 {
   "cidades": [
     {
+      "nome": "Curitiba",
+      "id": 1
+    },
+    {
       "nome": "Rio de Janeiro",
       "id": 2
     },
@@ -19,6 +23,10 @@
     {
       "nome": "Roraima",
       "id": 6
+    },
+    {
+      "nome": "Joinville",
+      "id": 7
     }
   ]
 }

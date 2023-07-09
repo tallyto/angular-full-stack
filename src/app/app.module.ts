@@ -3,7 +3,7 @@ import {BrowserModule} from '@angular/platform-browser'
 
 import {AppRoutingModule} from './app-routing.module'
 import {AppComponent} from './app.component'
-import {NgbCollapseModule, NgbModule} from '@ng-bootstrap/ng-bootstrap'
+import {NgbAlertModule, NgbCollapseModule, NgbModule} from '@ng-bootstrap/ng-bootstrap'
 import {FormsModule} from '@angular/forms'
 import {FuncionarioCardComponent} from './funcionario-card/funcionario-card.component'
 import {CampoColoridoDirective} from './campo-colorido.directive'
@@ -35,7 +35,8 @@ registerLocaleData(ptBr)
     NgbModule,
     FormsModule,
     NgbCollapseModule,
-    HttpClientModule
+    HttpClientModule,
+    NgbAlertModule
   ],
   providers: [
     {provide: LOCALE_ID, useValue: 'pt'},
