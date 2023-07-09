@@ -12,7 +12,9 @@ import {PessoaComponent} from './pessoa/pessoa.component'
 import {registerLocaleData} from "@angular/common";
 import ptBr from '@angular/common/locales/pt';
 import {TemplateDrivenFormsComponent} from './template-driven-forms/template-driven-forms.component';
-import {NavBarComponent} from './nav-bar/nav-bar.component'
+import {NavBarComponent} from './nav-bar/nav-bar.component';
+import { CidadeComponent } from './cidade/cidade.component'
+import {HttpClientModule} from "@angular/common/http";
 
 registerLocaleData(ptBr)
 
@@ -24,14 +26,16 @@ registerLocaleData(ptBr)
     FuncionarioFormComponent,
     PessoaComponent,
     TemplateDrivenFormsComponent,
-    NavBarComponent
+    NavBarComponent,
+    CidadeComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     NgbModule,
     FormsModule,
-    NgbCollapseModule
+    NgbCollapseModule,
+    HttpClientModule
   ],
   providers: [
     {provide: LOCALE_ID, useValue: 'pt'},

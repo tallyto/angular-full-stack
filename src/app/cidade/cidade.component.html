@@ -1,0 +1,11 @@
+<div class="container">
+  <div *ngIf="error" class="alert alert-danger" role="alert">
+    {{error.message}}
+  </div>
+  <h2>cidade works!</h2>
+  <div *ngIf="cidades.length > 0">
+    <p *ngFor="let cidade of cidades">
+      {{cidade.nome}}
+    </p>
+  </div>
+</div>
