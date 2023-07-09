@@ -1,21 +1,29 @@
-import { Component } from '@angular/core'
+import {Component, OnInit} from '@angular/core'
+import {FuncionarioService} from "./funcionario.service";
 
 @Component({
   selector: 'app-funcionario-form',
   templateUrl: './funcionario-form.component.html',
-  styleUrls: ['./funcionario-form.component.css']
+  styleUrls: ['./funcionario-form.component.css'],
+  providers: [
+    FuncionarioService
+  ]
 })
-export class FuncionarioFormComponent {
+export class FuncionarioFormComponent implements OnInit{
   nome = 'Tállyto'
   adicionado = false
-  funcionarios: Funcionario[] = []
+  funcionarios: Funcionario[] = [];
+  constructor(private funcionarioService: FuncionarioService) {
 
-  adicionar (): void {
+  }
+
+  adicionar(): void {
     this.adicionado = true
-    this.funcionarios.push({
-      nome: this.nome,
-      id: this.funcionarios.length + 1
-    })
+    this.funcionarioService.adicionar(this.nome)
+  }
+
+  ngOnInit(): void {
+    this.funcionarios = this.funcionarioService.consultar();
   }
 }
 
