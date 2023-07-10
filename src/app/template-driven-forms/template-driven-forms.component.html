@@ -6,7 +6,9 @@
 
     <div class="form-group">
       <label class="form-label">Nome</label>
-      <input #nome="ngModel" [(ngModel)]="cliente.nome" [ngClass]="{'is-invalid': nome.invalid && (nome.dirty || nome.touched)}" class="form-control" minlength="10" name="nome"
+      <input #nome="ngModel" [(ngModel)]="cliente.nome"
+             [ngClass]="{'is-invalid': nome.invalid && (nome.dirty || nome.touched)}" class="form-control"
+             minlength="10" name="nome"
              required type="text">
       <div *ngIf="nome.invalid && (nome.dirty || nome.touched)" class="invalid-feedback">
         <div *ngIf="nome.errors?.['required']">Informe um nome válido.</div>
@@ -16,7 +18,9 @@
 
     <div class="form-group">
       <label class="form-label">E-mail</label>
-      <input #email="ngModel" [(ngModel)]="cliente.email" [ngClass]="{'is-invalid': email.invalid && (email.dirty || email.touched)}" class="form-control" email name="email" required
+      <input #email="ngModel" [(ngModel)]="cliente.email"
+             [ngClass]="{'is-invalid': email.invalid && (email.dirty || email.touched)}" class="form-control" email
+             name="email" required
              type="text">
       <div *ngIf="email.invalid && (email.dirty || email.touched)" class="invalid-feedback">
         <div *ngIf="email.errors?.['email']">O e-mail não possui um formato válido.</div>
@@ -25,7 +29,9 @@
 
     <div class="form-group">
       <label class="form-label">Profissão</label>
-      <select #profissao="ngModel" [(ngModel)]="cliente.profissao" [ngClass]="{'is-invalid': profissao.invalid && (profissao.dirty || profissao.touched)}" class="form-control" name="profissao"
+      <select #profissao="ngModel" [(ngModel)]="cliente.profissao"
+              [ngClass]="{'is-invalid': profissao.invalid && (profissao.dirty || profissao.touched)}"
+              class="form-control" name="profissao"
               required>
         <option disabled value="">Selecione</option>
         <option *ngFor="let profissao of profissoes" [value]="profissao">{{ profissao }}</option>

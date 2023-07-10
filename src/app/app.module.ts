@@ -13,7 +13,7 @@ import {registerLocaleData} from "@angular/common";
 import ptBr from '@angular/common/locales/pt';
 import {TemplateDrivenFormsComponent} from './template-driven-forms/template-driven-forms.component';
 import {NavBarComponent} from './nav-bar/nav-bar.component';
-import { CidadeComponent } from './cidade/cidade.component'
+import {CidadeComponent} from './cidade/cidade.component'
 import {HttpClientModule} from "@angular/common/http";
 
 registerLocaleData(ptBr)
