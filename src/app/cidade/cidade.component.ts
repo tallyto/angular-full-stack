@@ -3,6 +3,7 @@ import {CidadeService} from "./cidade.service";
 
 interface Cidade {
   nome: string;
+  id: number
 }
 
 interface Alert {
@@ -71,5 +72,33 @@ export class CidadeComponent implements OnInit {
     if (index !== -1) {
       this.alerts.splice(index, 1);
     }
+  }
+
+  atualizar(cidade: Cidade) {
+    this.cidadeService.atualizar(cidade).subscribe(
+      {
+        next: () => {
+          this.adicionarAlerta("success", "Cidade atualizada com sucesso!")
+          this.atualizarCidades()
+        },
+        error: (err) => {
+          this.adicionarAlerta("danger", err.message)
+        }
+      }
+    )
+  }
+
+  excluir(id: number) {
+    this.cidadeService.excluir(id).subscribe(
+      {
+        next: () => {
+          this.adicionarAlerta("success", "Cidade removida com sucesso!")
+          this.atualizarCidades()
+        },
+        error: (err) => {
+          this.adicionarAlerta("danger", err.message)
+        }
+      }
+    )
   }
 }

@@ -1,19 +1,35 @@
 <div class="container">
   <p *ngFor="let alert of alerts">
-    <ngb-alert [type]="alert.type" (closed)="fecharAlerta(alert)">{{ alert.message | json }}</ngb-alert>
+    <ngb-alert [type]="alert.type" (closed)="fecharAlerta(alert)">{{ alert.message }}</ngb-alert>
   </p>
-
+  <h4 class="mt-2">Cadastro de Cidades</h4>
+  <hr>
   <form (ngSubmit)="adicionar()" class="mt-2">
-    <input [(ngModel)]="nome" type="text" name="cidade" class="form-control" id="cidade" aria-describedby="cidadeHelp" placeholder="Nome da cidade" required>
+    <input [(ngModel)]="nome" type="text" name="cidade" class="form-control" id="cidade" aria-describedby="cidadeHelp"
+           placeholder="Nome da cidade" required autocomplete="off">
     <button class="btn btn-primary mt-2" type="submit">Adicionar</button>
   </form>
 
 
-  <hr>
-  <div *ngIf="cidades.length > 0">
-    <p *ngFor="let cidade of cidades">
-      {{cidade.nome}}
-    </p>
-  </div>
+  <table class="table mt-2">
+    <thead>
+    <tr>
+      <th>Código</th>
+      <th>Nome</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let cidade of cidades">
+      <td>{{cidade.id}}</td>
+      <td>
+        <div class="input-group">
+          <input type="text" class="form-control" [(ngModel)]="cidade.nome">
+          <button class="btn btn-primary" (click)="atualizar(cidade)">Atualizar</button>
+          <button class="btn btn-danger" (click)="excluir(cidade.id)">Excluir</button>
+        </div>
+      </td>
+    </tr>
+    </tbody>
+  </table>
 
 </div>

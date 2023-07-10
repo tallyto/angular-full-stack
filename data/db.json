@@ -1,32 +1,32 @@
 {
   "cidades": [
     {
-      "nome": "Curitiba",
-      "id": 1
-    },
-    {
-      "nome": "Rio de Janeiro",
-      "id": 2
-    },
-    {
-      "nome": "São Paulo",
-      "id": 3
-    },
-    {
       "nome": "Belo Horizonte",
       "id": 4
     },
     {
-      "nome": "Salvador",
-      "id": 5
-    },
-    {
-      "nome": "Roraima",
+      "nome": "Roraima - Boa Vista",
       "id": 6
     },
     {
       "nome": "Joinville",
       "id": 7
+    },
+    {
+      "nome": "Boa Vista",
+      "id": 8
+    },
+    {
+      "nome": "Rondonia",
+      "id": 9
+    },
+    {
+      "nome": "João Pessoa",
+      "id": 10
+    },
+    {
+      "nome": "Tilambucano",
+      "id": 12
     }
   ]
 }
